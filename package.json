@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-story",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "VuePress theme for Storyscript",
   "main": "Layout.vue",
   "repository": {
@@ -14,10 +14,12 @@
     "theme"
   ],
   "author": "Storyscript",
-  "maintainers": [{
-    "name": "Jean Barriere",
-    "email": "jean@storyscript.io"
-  }],
+  "maintainers": [
+    {
+      "name": "Jean Barriere",
+      "email": "jean@storyscript.io"
+    }
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/storyscript/vuepress-theme-story/issues"
