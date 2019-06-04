@@ -11,11 +11,11 @@
           v-if="prev"
           class="prev"
         >
-          ← <router-link
+          <router-link
             v-if="prev"
             class="prev"
             :to="prev.path"
-          >
+          >←
             {{ prev.title || prev.path }}
           </router-link>
         </span>
@@ -27,8 +27,8 @@
             v-if="next"
             :to="next.path"
           >
-            {{ next.title || next.path }}
-          </router-link> →
+            {{ next.title || next.path }} →
+          </router-link>
         </span>
       </p>
     </div>

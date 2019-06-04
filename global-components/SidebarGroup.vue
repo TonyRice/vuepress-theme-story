@@ -3,25 +3,21 @@
     class="sidebar-group"
     :class="{ first, collapsable }"
   >
-    <p
+    <span
       class="sidebar-heading"
       :class="{ open }"
       @click="$emit('toggle')"
     >
-      <span>{{ item.title }}</span>
-      <span
-        class="arrow"
-        v-if="collapsable"
-        :class="open ? 'down' : 'right'"
-      ></span>
-    </p>
+      {{ item.title }}
+    </span>
     <ul
       class="sidebar-group-items"
       ref="items"
       v-if="open || !collapsable"
     >
       <li
-        v-for="child in item.children"
+        v-for="(child, idx) in item.children"
+        :key="`sidebar-group-items-child-${idx}`"
         class="sub-link"
       >
         <SidebarLink :item="child" />

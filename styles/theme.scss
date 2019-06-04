@@ -20,6 +20,10 @@
   }
 }
 
+p>svg {
+  vertical-align: text-bottom;
+}
+
 .docs .container {
   @include touch {
     padding-left: 0;
