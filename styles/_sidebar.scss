@@ -63,7 +63,7 @@
             .selectable-items {
               li {
                 a {
-                  font-weight: normal;
+                  font-weight: 600;
                   color: nth($grays, 3);
 
                   &.router-link-active {
@@ -81,9 +81,10 @@
           padding: 0.25rem;
           margin-top: 0.75rem;
 
-          a {
+          a,
+          .sidebar-group {
             color: nth($grays, 2);
-            font-weight: 500;
+            font-weight: 600;
           }
 
           &:last-child {
@@ -92,7 +93,8 @@
 
           cursor: pointer;
 
-          .sidebar-sub-headers {
+          .sidebar-sub-headers,
+          .sidebar-group-items {
             border-left: 2px solid #c6c7dc;
             margin-left: .25rem;
             padding-left: .5rem;
@@ -105,7 +107,7 @@
 
               &.active {
                 color: #000;
-                font-weight: 500;
+                font-weight: 600;
               }
             }
           }
@@ -138,10 +140,12 @@
               padding-left: .5rem;
 
               &:before {
-                margin-left: -1.5rem;
+                width: .125rem;
+                margin-left: -.875rem;
               }
             }
           }
+
         }
       }
     }

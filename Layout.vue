@@ -2,8 +2,8 @@
   <div class="docs">
     <s-jumbo
       :size="$route.path === '/' ? 'medium' : 'normal'"
-      :small="$route.path === '/' ? 'Documentation' : ''"
-      :title="getTitle"
+      :small="$route.path === '/' ? 'Documentation' : undefined"
+      :title="$route.path === '/' ? getTitle : undefined"
       :background="$route.path === '/'"
       dark
       class="has-padding-bottom-normal"
@@ -12,19 +12,18 @@
         slot="header"
         dark
         :items="menuItems"
-        @logo="$router.push('/')"
+        @logo="goToHome"
       />
-      <s-text
+      <!-- <s-text
         head="1"
         slot="title"
         color="white"
         class="is-hidden-mobile"
         v-if="$route.path !== '/'"
         v-text="getTitle"
-      />
+      /> -->
     </s-jumbo>
     <s-layout
-      margin="2x"
       background="gray-4"
       foreground="white"
       rounded
@@ -44,14 +43,21 @@
         >
           <s-level class="is-mobile">
             <template slot="left">
-              <s-icon
-                class="is-hidden-mobile"
-                icon="home"
-                height="14"
-                width="24"
-                fill="gray-2"
-              />
-              <span class="is-size-8 has-line-height-5 has-text-gray-2 has-text-weight-semibold has-text-uppercase">Documentation</span>
+              <s-text
+                @click.native="$router.push({ path: '/' })"
+                style="cursor:pointer"
+                highlight
+                color="gray-2"
+              >
+                <s-icon
+                  class="is-hidden-mobile"
+                  icon="home"
+                  height="14"
+                  width="24"
+                  fill="gray-2"
+                />
+                Documentation
+              </s-text>
             </template>
             <s-button
               link
@@ -132,6 +138,7 @@
     <s-join
       footer
       :dark="false"
+      class="has-padding-none"
       is-paddingless
     />
     <s-footer :dark="false" />
@@ -301,6 +308,9 @@ export default {
         x: e.changedTouches[0].clientX,
         y: e.changedTouches[0].clientY
       }
+    },
+    goToHome () {
+      window.location = '//storyscript.io'
     },
     onTouchEnd (e) {
       const dx = e.changedTouches[0].clientX - this.touchStart.x

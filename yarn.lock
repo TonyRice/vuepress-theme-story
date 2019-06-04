@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@storyscript/vue@^2.7.8":
-  version "2.7.8"
-  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.7.8.tgz#ef8aaed8c5f8f06318af4955fbec1991f3d47ba9"
-  integrity sha512-4dE+fcSxC9zo1aHTOq8a3+zXMtiyNLA936VrcAFeFdghFqZYRivr58mB57sWg07YtucVcomPK3yPY7dwiedObw==
+"@storyscript/vue@^2.7.9":
+  version "2.7.9"
+  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.7.9.tgz#79d207b593f35d74c91884034969d2343b757741"
+  integrity sha512-7Ww5IlE3ZeLRiTy9HD43ei7fXHJ3KsoG/Qo6viWz2k2OuRnVPgReu+zMACThlITgyj7JkCQP+sDWYk0LQl/vXA==
   dependencies:
     bulma "^0.7.4"
     vue "^2.6.10"
