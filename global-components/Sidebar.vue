@@ -48,7 +48,10 @@
         class="sidebar-links"
         v-if="items.length"
       >
-        <li v-for="(item, i) in items">
+        <li
+          v-for="(item, i) in items"
+          :key="`list-${_uid}-items-${i}`"
+        >
           <SidebarGroup
             v-if="item.type === 'group'"
             :item="item"
@@ -91,6 +94,7 @@ export default {
   },
   created () {
     this.refreshIndex()
+    console.log(this.items)
   },
   watch: {
     '$route' () {

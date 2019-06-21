@@ -71,7 +71,14 @@ p>svg {
 }
 
 .search-form {
-  padding: 2rem 0 !important;
+  padding: 1rem 0 2rem !important;
+
+  input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
 }
 
 .algolia-autocomplete {

@@ -13,7 +13,7 @@ export default {
     const active = item.type === 'auto'
       ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
       : selfActive
-    const link = renderLink(h, item.path, item.title || item.path, active)
+    const link = renderLink(h, item.path, item.title || item.path, item.icon, active)
     const configDepth = $page.frontmatter.sidebarDepth != null
       ? $page.frontmatter.sidebarDepth
       : $site.themeConfig.sidebarDepth
@@ -29,7 +29,7 @@ export default {
   }
 }
 
-function renderLink (h, to, text, active) {
+function renderLink (h, to, text, icon, active) {
   return h('router-link', {
     props: {
       to,
@@ -40,7 +40,7 @@ function renderLink (h, to, text, active) {
       active,
       'sidebar-link': true
     }
-  }, text)
+  }, icon ? [h('sidebar-icon', { props: { name: icon } }), h('span', text)] : text)
 }
 
 function renderChildren (h, children, path, route, maxDepth, depth = 1) {
@@ -48,7 +48,7 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
   return h('ul', { class: 'sidebar-sub-headers' }, children.map(c => {
     const active = isActive(route, path + '#' + c.slug)
     return h('li', { class: 'sidebar-sub-header' }, [
-      renderLink(h, '#' + c.slug, c.title, active),
+      renderLink(h, '#' + c.slug, c.title, c.icon, active),
       renderChildren(h, c.children, path, route, maxDepth, depth + 1)
     ])
   }))

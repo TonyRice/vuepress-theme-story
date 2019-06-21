@@ -56,13 +56,25 @@ export function isActive(route, path) {
   return routePath === pagePath
 }
 
-export function resolvePage(pages, rawPath, base) {
+export function resolvePage(pages, rawPath, base, icon, title) {
   if (base) {
     rawPath = resolvePath(rawPath, base)
   }
   const path = normalize(rawPath)
   for (let i = 0; i < pages.length; i++) {
     if (normalize(pages[i].path) === path) {
+      if (icon) {
+        pages[i] = {
+          ...pages[i],
+          icon
+        }
+      }
+      if (title) {
+        pages[i] = {
+          ...pages[i],
+          title
+        }
+      }
       return Object.assign({}, pages[i], {
         type: 'page',
         path: ensureExt(rawPath)
@@ -74,6 +86,9 @@ export function resolvePage(pages, rawPath, base) {
 }
 
 function resolvePath(relative, base, append) {
+  if (typeof relative !== typeof '') {
+    relative = relative.path
+  }
   const firstChar = relative.charAt(0)
   if (firstChar === '/') {
     return relative
@@ -144,6 +159,7 @@ function resolveHeaders(page) {
     type: 'group',
     collapsable: false,
     title: page.title,
+    icon: page.icon,
     children: headers.map(h => ({
       type: 'auto',
       title: h.title,
@@ -205,6 +221,8 @@ function resolveItem(item, pages, base, isNested) {
     return Object.assign(resolvePage(pages, item[0], base), {
       title: item[1]
     })
+  } else if (typeof item === typeof {} && 'path' in item) {
+    return resolvePage(pages, item, base, item.icon, item.title)
   } else {
     if (isNested) {
       console.error(
@@ -216,6 +234,7 @@ function resolveItem(item, pages, base, isNested) {
     return {
       type: 'group',
       title: item.title,
+      icon: item.icon,
       children: children.map(child => resolveItem(child, pages, base, true)),
       collapsable: item.collapsable !== false
     }

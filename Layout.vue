@@ -36,7 +36,7 @@
         @touchstart="onTouchStart"
         @touchend="onTouchEnd"
       >
-        <s-div
+        <!-- <s-div
           size="full"
           padding="small"
           class="bordered-bottom-light"
@@ -84,7 +84,7 @@
               </svg>
             </s-button>
           </s-level>
-        </s-div>
+        </s-div> -->
         <s-div
           size="one-fifth-desktop is-one-quarter-tablet"
           class="sidebar-sticky is-font-graphik"
@@ -106,33 +106,40 @@
             </Sidebar>
           </perfect-scrollbar>
         </s-div>
-        <s-div
-          size="8-desktop is-7-tablet"
-          class="is-offset-1 custom-layout is-font-graphik"
-        >
-          <AlgoliaSearchBox
-            v-if="isAlgoliaSearch"
-            :options="algolia"
-          />
-          <component
-            v-if="$page.frontmatter.layout"
-            class="page"
-            :is="$page.frontmatter.layout"
-          />
-          <Page
-            v-else
-            :sidebar-items="sidebarItems"
+
+        <s-div size="four-fifths-desktop is-three-quarters-tablet">
+          <s-div size="full">
+            <AlgoliaSearchBox
+              v-if="isAlgoliaSearch"
+              :options="algolia"
+            />
+          </s-div>
+          <s-div
+            size="10-desktop is-10-tablet"
+            class="is-offset-1 custom-layout is-font-graphik"
           >
-            <slot
-              name="page-top"
-              slot="top"
+            <component
+              v-if="$page.frontmatter.layout"
+              class="page"
+              :is="$page.frontmatter.layout"
             />
-            <slot
-              name="page-bottom"
-              slot="bottom"
-            />
-          </Page>
+            <Page
+              v-else
+              :sidebar-items="sidebarItems"
+            >
+              <slot
+                name="page-top"
+                slot="top"
+              />
+              <slot
+                name="page-bottom"
+                slot="bottom"
+              />
+            </Page>
+          </s-div>
+
         </s-div>
+
       </s-container>
     </s-layout>
     <s-join
@@ -147,7 +154,6 @@
 
 <script>
 import Vue from 'vue'
-import Storyscript from '@storyscript/vue'
 import nprogress from 'nprogress'
 import Page from './global-components/Page.vue'
 import Sidebar from './global-components/Sidebar.vue'
@@ -155,8 +161,6 @@ import AlgoliaSearchBox from './global-components/AlgoliaSearchBox'
 import store from '@app/store'
 import { resolveSidebarItems, normalize, outboundRE, endingSlashRE } from './util'
 import throttle from 'lodash.throttle'
-
-Vue.use(Storyscript)
 
 export default {
   components: { Page, Sidebar, AlgoliaSearchBox },
