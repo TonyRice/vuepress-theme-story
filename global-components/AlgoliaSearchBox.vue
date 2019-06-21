@@ -3,7 +3,7 @@
     <s-input
       placeholder="Search documentation"
       id="algolia-search-input"
-      :icon-right="['s-icon', { icon: 'search'}]"
+      :icon-left="['s-icon', { icon: 'search'}]"
     />
   </form>
 </template>

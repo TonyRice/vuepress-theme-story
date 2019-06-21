@@ -2,8 +2,9 @@
   display: block;
 
   .columns {
-    border-radius: 10px;
-    box-shadow: 0 2px 20px -10px rgba($black, .2);
+    border-radius: .625rem;
+    // box-shadow: 0 2px 20px -10px rgba($black, .2);
+    border: 1px solid #d4d6e0;
     margin: 1rem auto;
     padding: 0;
     position: relative;
@@ -70,7 +71,7 @@
       background-color: $white;
       height: 100%;
       padding: 0 2rem !important;
-      border-left: 1px solid #f2f3f9 !important;
+      border-left: 1px solid #d4d6e0 !important;
       border-radius: 0 .625rem .625rem 0;
 
       &:hover,
