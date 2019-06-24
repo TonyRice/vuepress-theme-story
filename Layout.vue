@@ -86,7 +86,7 @@
           </s-level>
         </s-div> -->
         <s-div
-          size="one-fifth-desktop is-one-quarter-tablet"
+          size="one-quarter"
           class="sidebar-sticky is-font-graphik"
         >
           <perfect-scrollbar>
@@ -107,7 +107,7 @@
           </perfect-scrollbar>
         </s-div>
 
-        <s-div size="four-fifths-desktop is-three-quarters-tablet">
+        <s-div size="three-quarters">
           <s-div size="full">
             <AlgoliaSearchBox
               v-if="isAlgoliaSearch"

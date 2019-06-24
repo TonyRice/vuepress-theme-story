@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@storyscript/vue@^2.7.10":
-  version "2.7.10"
-  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.7.10.tgz#c95969f43bfe31e0ff46ecd72b8efe944a0ee397"
-  integrity sha512-zyxxGWaI39i1NfTjoj1KcyNTfskuCIYaUBGnRKje5x4emCS1282tKW4VviFEB4VYk0oVnAyayKf44oK5bN4PNg==
+"@storyscript/vue@^2.8.4":
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.8.4.tgz#b598ceba3d15223deed1760b3ff6b998b99a7a03"
+  integrity sha512-H2WR5YnLwD6gOVRDkhYzsOE/enanQ0hKEkxHFlBCOQb97yD7TRfDuJBpEKB4CKDfPKJ8VY8Lvh3GnCB9ANXbqg==
   dependencies:
-    bulma "^0.7.4"
+    bulma "^0.7.5"
     vue "^2.6.10"
 
 abbrev@1:
@@ -127,7 +127,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-bulma@^0.7.4:
+bulma@^0.7.5:
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
   integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
