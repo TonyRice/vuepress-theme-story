@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.7](https://github.com/storyscript/vuepress-theme-story/compare/v0.0.6...v0.0.7) (2019-06-24)
+
+
+### Bug Fixes
+
+* **layout:** fix content margins/size ([98a5ca3](https://github.com/storyscript/vuepress-theme-story/commit/98a5ca3))
+
+
+
 ## [0.0.6](https://github.com/storyscript/vuepress-theme-story/compare/v0.0.5...v0.0.6) (2019-06-21)
 
 

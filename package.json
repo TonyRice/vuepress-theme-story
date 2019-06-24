@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-story",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "VuePress theme for Storyscript",
   "main": "Layout.vue",
   "repository": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/storyscript/vuepress-theme-story#readme",
   "dependencies": {
-    "@storyscript/vue": "^2.7.10",
+    "@storyscript/vue": "^2.8.4",
     "esm": "^3.2.22",
     "node-sass": "^4.12.0",
     "perfect-scrollbar": "0.8.1",
