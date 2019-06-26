@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-story",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "VuePress theme for Storyscript",
   "main": "Layout.vue",
   "repository": {

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.10](https://github.com/storyscript/vuepress-theme-story/compare/v0.0.9...v0.0.10) (2019-06-26)
+
+
+### Bug Fixes
+
+* **search-border-color:** fix search border color ([fe61ee2](https://github.com/storyscript/vuepress-theme-story/commit/fe61ee2))
+
+
+
 ## [0.0.9](https://github.com/storyscript/vuepress-theme-story/compare/v0.0.8...v0.0.9) (2019-06-26)
 
 
