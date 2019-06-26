@@ -84,7 +84,7 @@ p>svg {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
-    border-color: darken(nth($grays, 4), 10%);
+    border-color: darken(nth($grays, 4), 10%) !important;
   }
 }
 
