@@ -51,6 +51,8 @@
       .sidebar-heading {
         font-size: .9rem;
         font-weight: 600;
+        width: 100%;
+        display: block;
       }
 
       .sidebar-heading,
@@ -110,6 +112,8 @@
             .selectable-items {
               li {
                 a {
+                  width: 100%;
+                  display: block;
                   font-weight: 600;
                   color: nth($grays, 3);
 
@@ -132,6 +136,8 @@
           .sidebar-group {
             color: nth($grays, 2);
             font-weight: 600;
+            width: 100%;
+            display: block;
           }
 
           &:last-child {
@@ -151,6 +157,8 @@
             a {
               color: #7b7b8f;
               font-weight: normal;
+              width: 100%;
+              display: block;
 
               &.active {
                 color: #000;
