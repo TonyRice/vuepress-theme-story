@@ -32,6 +32,17 @@
         </span>
       </p>
     </div>
+    <s-button
+      link
+      size="small"
+      :url="{ href: editLink, target: '' }"
+    >
+      <s-icon
+        icon="pen"
+        :props="{ fill: '#5805fc', style: 'vertical-align:text-bottom' }"
+      />
+      {{ editLinkText }}
+    </s-button>
     <slot name="bottom" />
   </div>
 </template>

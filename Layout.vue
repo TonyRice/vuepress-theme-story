@@ -145,8 +145,6 @@
     <s-join
       footer
       :dark="false"
-      class="has-padding-none"
-      is-paddingless
     />
     <s-footer :dark="false" />
   </div>
