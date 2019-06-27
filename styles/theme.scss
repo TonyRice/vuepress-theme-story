@@ -14,36 +14,8 @@
   padding-bottom: 2rem;
 }
 
-.has-top-outside-2x {
-  @include touch {
-    top: -2rem;
-  }
-}
-
 p>svg {
   vertical-align: text-bottom;
-}
-
-.docs .container {
-  @include touch {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .columns {
-    @include touch {
-      margin-left: 0;
-      margin-right: 0;
-      border-radius: 0;
-    }
-  }
-}
-
-.navbar .container {
-  @include touch {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .page-nav.content {
@@ -53,18 +25,6 @@ p>svg {
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.hero-head {
-  @include mobile {
-    min-height: 10rem;
-  }
-}
-
-.hero-body {
-  @include mobile {
-    padding: 0;
   }
 }
 
