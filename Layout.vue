@@ -6,7 +6,6 @@
       :title="$route.path === '/' ? getTitle : undefined"
       :background="$route.path === '/'"
       dark
-      class="has-padding-bottom-normal"
     >
       <s-navbar
         slot="header"
@@ -28,6 +27,7 @@
       foreground="white"
       rounded
       shadow
+      margin="normal"
       outside
       narrow
     >
@@ -202,7 +202,7 @@ export default {
       }
     },
     getTitle () {
-      if (this.$route.path === '/') return 'Welcome home.'
+      if (this.$route.path === '/') return 'Write you own story.'
       const item = this.sidebarItems.find(i => i.path === this.$route.path || (i.children && i.children.find(c => c.path === this.$route.path)))
       return item ? item.title : ''
     },
