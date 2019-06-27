@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.1](https://github.com/storyscript/vuepress-theme-story/compare/v0.1.0...v0.1.1) (2019-06-27)
+
+
+### Bug Fixes
+
+* **build:** remove console.log + update library ([088db36](https://github.com/storyscript/vuepress-theme-story/commit/088db36))
+
+
+
 # [0.1.0](https://github.com/storyscript/vuepress-theme-story/compare/v0.0.10...v0.1.0) (2019-06-27)
 
 
