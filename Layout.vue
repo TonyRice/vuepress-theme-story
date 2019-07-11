@@ -148,7 +148,9 @@
       @showBetaModal="$refs.joinBeta.show()"
     />
     <s-footer :dark="false" />
-    <s-modal-beta ref="joinBeta" />
+    <s-modal-beta
+      ref="joinBeta"
+      blur />
   </div>
 </template>
 
