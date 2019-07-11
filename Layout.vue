@@ -145,7 +145,7 @@
     <s-join
       footer
       :dark="false"
-      @showBetaModal="$refs.joinBeta.show()"
+      @showBetaModal="showBetaModal"
     />
     <s-footer :dark="false" />
     <s-modal-beta
@@ -307,6 +307,10 @@ export default {
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+    },
+    showBetaModal () {
+      this.$refs.joinBeta.show()
+      window.scrollTo(0, 0)
     },
     // side swipe
     onTouchStart (e) {
