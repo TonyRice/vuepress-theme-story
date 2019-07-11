@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.4](https://github.com/storyscript/vuepress-theme-story/compare/v0.2.3...v0.2.4) (2019-07-11)
+
+
+
+## [0.2.3](https://github.com/storyscript/vuepress-theme-story/compare/v0.2.2...v0.2.3) (2019-07-11)
+
+
+### Bug Fixes
+
+* **blur:** put the blur on the modal ([75e0911](https://github.com/storyscript/vuepress-theme-story/commit/75e0911))
+
+
+
+## [0.2.2](https://github.com/storyscript/vuepress-theme-story/compare/v0.2.1...v0.2.2) (2019-07-11)
+
+
+### Bug Fixes
+
+* **beta:** fix join-beta modal ([bc7b3f2](https://github.com/storyscript/vuepress-theme-story/commit/bc7b3f2))
+
+
+
 ## [0.2.1](https://github.com/storyscript/vuepress-theme-story/compare/v0.2.0...v0.2.1) (2019-07-11)
 
 
