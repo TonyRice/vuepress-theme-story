@@ -145,8 +145,10 @@
     <s-join
       footer
       :dark="false"
+      @showBetaModal="$refs.joinBeta.show()"
     />
     <s-footer :dark="false" />
+    <s-modal-beta ref="joinBeta" />
   </div>
 </template>
 
